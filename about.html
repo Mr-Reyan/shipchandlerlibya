@@ -330,11 +330,38 @@
       box-shadow: var(--shadow-lg);
       padding: 16px;
       min-width: 240px;
+      max-height: 400px;
+      overflow-y: auto;
       opacity: 0;
       visibility: hidden;
       transition: var(--transition-bounce);
       border: 1px solid var(--gray-100);
       transform-origin: top center;
+    }
+
+    /* Custom Scrollbar for Dropdown Menu */
+    .dropdown-menu::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-track {
+      background: transparent;
+      margin: 8px 0;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb {
+      background: var(--gray-300);
+      border-radius: 10px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-500);
+    }
+
+    /* Firefox Scrollbar */
+    .dropdown-menu {
+      scrollbar-width: thin;
+      scrollbar-color: var(--gray-300) transparent;
     }
 
     .nav-item:hover .dropdown-menu {
@@ -1115,11 +1142,18 @@
                 </svg></span></a>
             <div class="dropdown-menu">
               <a href="services.html#provisions">Provisions Supply</a>
-              <a href="services.html#deck">Deck Stores</a>
-              <a href="services.html#cabin">Cabin & Galley</a>
-              <a href="services.html#engine">Engine Stores</a>
               <a href="services.html#bonded">Bonded Stores</a>
+              <a href="services.html#deck">Deck Stores</a>
+              <a href="services.html#engine">Engine Stores</a>
+              <a href="services.html#cabin">Cabin & Galley</a>
               <a href="services.html#safety">Safety & PPE</a>
+              <a href="services.html#electrical">Electrical Stores</a>
+              <a href="services.html#chemicals">Marine Chemicals</a>
+              <a href="services.html#welding">Welding Equipment</a>
+              <a href="services.html#spare-parts">Spare Parts</a>
+              <a href="services.html#publications">Nautical Charts</a>
+              <a href="services.html#tools">Tools & Hardware</a>
+              <a href="services.html#urgent">Urgent Supply</a>
             </div>
           </li>
           <li class="nav-item has-dropdown">
