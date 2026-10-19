@@ -23,6 +23,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="assets/imgs/favicon.png">
+
   <style>
     /* =========================================
        NEW MODERN THEME VARIABLES
@@ -319,8 +323,8 @@
 
     /* Mega Menu */
     .mega-menu {
-      position: absolute;
-      top: calc(100% + 12px);
+      position: fixed;
+      top: 90px;
       left: 50%;
       transform: translateX(-50%) translateY(10px) scale(0.95);
       background: var(--white);
@@ -328,6 +332,7 @@
       box-shadow: var(--shadow-lg);
       padding: 32px;
       min-width: 900px;
+      max-width: 95vw;
       opacity: 0;
       visibility: hidden;
       transition: var(--transition-bounce);
@@ -335,6 +340,32 @@
       transform-origin: top center;
       max-height: 70vh;
       overflow-y: auto;
+      z-index: 999;
+    }
+
+    /* Custom Scrollbar for Mega Menu */
+    .mega-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .mega-menu::-webkit-scrollbar-track {
+      background: transparent;
+      margin: 16px 0;
+    }
+
+    .mega-menu::-webkit-scrollbar-thumb {
+      background: var(--gray-300);
+      border-radius: 10px;
+    }
+
+    .mega-menu::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-500);
+    }
+
+    /* Firefox Scrollbar */
+    .mega-menu {
+      scrollbar-width: thin;
+      scrollbar-color: var(--gray-300) transparent;
     }
 
     .nav-item:hover .mega-menu {
@@ -350,10 +381,6 @@
       margin-bottom: 24px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--gray-100);
-      position: sticky;
-      top: 0;
-      background: var(--white);
-      z-index: 2;
     }
 
     .mega-header-title {
@@ -379,8 +406,9 @@
 
     .mega-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      padding: 0 8px;
     }
 
     .mega-group h4 {
@@ -848,7 +876,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B132B'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='40' font-weight='bold' fill='%23FFD166' text-anchor='middle' dominant-baseline='middle'%3ESL%3C/text%3E%3C/svg%3E" alt="ShipChandler Libya Logo" width="40" height="40">
+        <img src="assets/imgs/logo-shipchandler-libya.png" alt="ShipChandler Libya Logo" width="40" height="40">
         <span class="logo-text">
           <strong>ShipChandler</strong>
           <span>Libya</span>
@@ -1065,7 +1093,7 @@
           <h4>Contact Us</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Misurata Seaport, Qasr Ahmed, Misurata, Libya</li>
-            <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
             <li><i class="fas fa-envelope"></i> <a href="mailto:sales@shipchandlerlibya.com" style="color:inherit;">sales@shipchandlerlibya.com</a></li>
             <li><i class="fas fa-user-tie"></i> Omar Ali (Operations Manager)</li>
           </ul>
@@ -1073,11 +1101,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
-        <div>
-          <a href="sitemap.xml" style="margin-right: 16px;">Sitemap</a>
-          <a href="ports/index.html">Port Directory</a>
-        </div>
+        <div style="text-align:center; width:100%;">&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
       </div>
     </div>
   </footer>
@@ -1122,11 +1146,9 @@
       return group;
     }
 
-    const grid = document.createElement('div');
-    grid.className = 'mega-grid';
-    grid.appendChild(createPortGroup('African Ports (A-M)', col1));
-    grid.appendChild(createPortGroup('African Ports (N-Z)', col2));
-    megaList.appendChild(grid);
+    megaList.appendChild(createPortGroup('African Ports (A-D)', col1));
+    megaList.appendChild(createPortGroup('African Ports (E-M)', col2));
+    megaList.appendChild(createPortGroup('African Ports (N-Z)', col3));
 
     // --- Search Functionality ---
     document.getElementById('mega-port-search').addEventListener('input', function(e) {

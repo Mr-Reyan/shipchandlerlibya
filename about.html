@@ -23,6 +23,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="assets/imgs/favicon.png">
+
   <style>
     /* =========================================
        NEW MODERN THEME VARIABLES
@@ -331,15 +335,16 @@
 
     /* Mega Menu */
     .mega-menu {
-      position: absolute;
-      top: calc(100% + 12px);
+      position: fixed;
+      top: 90px;
       left: 50%;
       transform: translateX(-50%) translateY(10px) scale(0.95);
       background: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
       padding: 32px;
-      min-width: 800px;
+      min-width: 900px;
+      max-width: 95vw;
       opacity: 0;
       visibility: hidden;
       transition: var(--transition-bounce);
@@ -347,6 +352,32 @@
       transform-origin: top center;
       max-height: 70vh;
       overflow-y: auto;
+      z-index: 999;
+    }
+
+    /* Custom Scrollbar for Mega Menu */
+    .mega-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .mega-menu::-webkit-scrollbar-track {
+      background: transparent;
+      margin: 16px 0;
+    }
+
+    .mega-menu::-webkit-scrollbar-thumb {
+      background: var(--gray-300);
+      border-radius: 10px;
+    }
+
+    .mega-menu::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-500);
+    }
+
+    /* Firefox Scrollbar */
+    .mega-menu {
+      scrollbar-width: thin;
+      scrollbar-color: var(--gray-300) transparent;
     }
 
     .nav-item:hover .mega-menu {
@@ -386,8 +417,9 @@
 
     .mega-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      padding: 0 8px;
     }
 
     .mega-group h4 {
@@ -856,7 +888,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B132B'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='40' font-weight='bold' fill='%23FFD166' text-anchor='middle' dominant-baseline='middle'%3ESL%3C/text%3E%3C/svg%3E" alt="ShipChandler Libya Logo" width="40" height="40">
+        <img src="assets/imgs/logo-shipchandler-libya.png" alt="ShipChandler Libya Logo" width="40" height="40">
         <span class="logo-text">
           <strong>ShipChandler</strong>
           <span>Libya</span>
@@ -886,27 +918,14 @@
             <a class="nav-link" href="javascript:void(0)">Ports <span class="nav-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></a>
             <div class="mega-menu">
               <div class="mega-header">
-                <div class="mega-header-title">Libyan Port Network</div>
+                <div class="mega-header-title">Global Port Network</div>
                 <div class="mega-search">
                   <i class="fas fa-search" style="color:var(--gray-500);"></i>
-                  <input type="text" placeholder="Search port...">
+                  <input type="text" id="mega-port-search" placeholder="Search 49 ports...">
                 </div>
               </div>
-              <div class="mega-grid">
-                <div class="mega-group">
-                  <h4>West Libya</h4>
-                  <a href="ports/tripoli.html">Tripoli Ship Chandler</a>
-                  <a href="ports/misrata.html">Misrata Ship Chandler</a>
-                  <a href="ports/khoms.html">Khoms Ship Chandler</a>
-                  <a href="ports/zuwara.html">Zuwara Ship Chandler</a>
-                </div>
-                <div class="mega-group">
-                  <h4>East & Central Libya</h4>
-                  <a href="ports/benghazi.html">Benghazi Ship Chandler</a>
-                  <a href="ports/tobruk.html">Tobruk Ship Chandler</a>
-                  <a href="ports/sirte.html">Sirte Ship Chandler</a>
-                  <a href="ports/ras-lanuf.html">Ras Lanuf Ship Chandler</a>
-                </div>
+              <div class="mega-grid" id="mega-port-list">
+                <!-- Populated via JS -->
               </div>
             </div>
           </li>
@@ -1021,7 +1040,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FFD166'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='40' font-weight='bold' fill='%230B132B' text-anchor='middle' dominant-baseline='middle'%3ESL%3C/text%3E%3C/svg%3E" alt="Logo" width="40" height="40">
+            <img src="assets/imgs/logo-shipchandler-libya.png" alt="Logo" width="40" height="40">
             <span class="logo-text">
               <strong>ShipChandler</strong>
               <span style="color: var(--yellow);">Libya</span>
@@ -1056,7 +1075,7 @@
           <h4>Contact Us</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Misurata Seaport, Qasr Ahmed, Misurata, Libya</li>
-            <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
             <li><i class="fas fa-envelope"></i> <a href="mailto:sales@shipchandlerlibya.com" style="color:inherit;">sales@shipchandlerlibya.com</a></li>
             <li><i class="fas fa-user-tie"></i> Omar Ali (Operations Manager)</li>
           </ul>
@@ -1064,11 +1083,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
-        <div>
-          <a href="sitemap.xml" style="margin-right: 16px;">Sitemap</a>
-          <a href="ports/index.html">Port Directory</a>
-        </div>
+        <div style="text-align:center; width:100%;">&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
       </div>
     </div>
   </footer>
@@ -1079,6 +1094,67 @@
   </a>
 
   <script>
+    // --- Port List Data for Dropdown ---
+    const ports = [
+      "Ship Chandler Dar Es Salaam", "Ship Chandler Apapa", "Ship Chandler Onne Port Nigeria", "San Pedro Ship Supply Chandler",
+      "Ship Chandler Abidjan", "Ship Chandler Freetown", "Monrovia Ship Chandler", "Ship Chandler Maputo", "Ship Chandler Matadi",
+      "Ship Chandler Beira", "Ship Chandler Angola", "Ship Chandler Lobito", "ShipChandler Lome", "Shipchandler Lome",
+      "Ivory Coast Ship Chandler", "Nouadhibou Ship Chandler", "Ship Chandler Luanda", "Ship Chandler Cape Verde",
+      "Ship Chandler Gabon", "Ship Chandler Namibia", "Walvis Bay Ship Chandler", "Ship Chandler Gentil Port - Gabon",
+      "Ship Chandler Takoradi", "Ship Chandler Congo", "Shipchandler Lagos", "Ship Chandler Port Ambon",
+      "Shipchandler Pointe Noire", "Ship Chandler Djibouti", "Ship Chandler Cabinda", "Ship Chandler Tema",
+      "Ship Chandler Mindelo", "Ship Chandler Casablanca", "Ship Chandler Safi Port Morocco", "Ship Chandler Kamsar",
+      "Ship Chandler Soyo", "Dakar Ship Chandler", "Ship Chandler Senegal", "Ship Chandler Dakar", "Bissau Ship Chandler - Guinea",
+      "Conakry Ship Chandler", "Ship Chandler Cotonou", "Douala Ship Chandler", "Liberia Ship Chandler", "Namibia Ship Chandler",
+      "Ship Chandler Dakar", "Ship Chandler Mombasa", "Ship Chandlers Saldanha Bay", "Ship Chandler Owendo", "Ship Chandlers Richards Bay"
+    ];
+
+    // Populate Mega Menu
+    const megaList = document.getElementById('mega-port-list');
+    if (megaList) {
+      const third = Math.ceil(ports.length / 3);
+      const col1 = ports.slice(0, third);
+      const col2 = ports.slice(third, third * 2);
+      const col3 = ports.slice(third * 2);
+
+      function createPortGroup(title, items) {
+        const group = document.createElement('div');
+        group.className = 'mega-group';
+        group.innerHTML = `<h4>${title}</h4>`;
+        items.forEach(port => {
+          const a = document.createElement('a');
+          a.href = `ports/${port.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html`;
+          a.textContent = port;
+          group.appendChild(a);
+        });
+        return group;
+      }
+
+      megaList.appendChild(createPortGroup('African Ports (A-D)', col1));
+      megaList.appendChild(createPortGroup('African Ports (E-M)', col2));
+      megaList.appendChild(createPortGroup('African Ports (N-Z)', col3));
+
+      // Mega Menu Search
+      const searchInput = document.getElementById('mega-port-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          const query = e.target.value.toLowerCase();
+          const allLinks = megaList.querySelectorAll('a');
+          const groups = megaList.querySelectorAll('.mega-group');
+          
+          allLinks.forEach(link => {
+            const text = link.textContent.toLowerCase();
+            link.style.display = text.includes(query) ? 'block' : 'none';
+          });
+
+          groups.forEach(group => {
+            const hasVisible = Array.from(group.querySelectorAll('a')).some(a => a.style.display !== 'none');
+            group.style.display = hasVisible ? 'block' : 'none';
+          });
+        });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       
       // --- Sticky Header Effect ---

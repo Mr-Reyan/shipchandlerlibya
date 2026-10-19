@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Bissau Ship Chandler - Guinea | Ship Supply, Provisions &amp; Marine Stores</title>
+  <title>Bissau Ship Chandler - Guinea | Ship Supply, Provisions & Marine Stores</title>
   <meta name="description" content="Bissau Ship Chandler - Guinea provides professional ship supply, provisions, bonded stores, deck and engine stores, safety equipment, spare parts and marine procurement services.">
+  <meta name="keywords" content="ship chandler, ship supply, provisions, marine stores, bonded stores, deck stores, engine stores, vessel supply, marine procurement">
+  <meta name="author" content="Ship Chandler Libya CO., LTD">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Bissau Ship Chandler - Guinea | Ship Supply, Provisions & Marine Stores">
+  <meta property="og:description" content="Bissau Ship Chandler - Guinea provides professional ship supply, provisions, bonded stores, deck and engine stores, safety equipment, spare parts and marine procurement services.">
+  <meta property="og:type" content="website">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,735 +21,12 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    /* =========================================
-       NEW MODERN THEME VARIABLES
-    ========================================= */
-    :root {
-      --navy: #0B132B;
-      --navy-mid: #1C2541;
-      --navy-light: #3A506B;
-      --yellow: #FFD166;
-      --yellow-glow: rgba(255, 209, 102, 0.4);
-      --yellow-hover: #FCA311;
-      --white: #FFFFFF;
-      --off-white: #F4F7FB;
-      --gray-100: #E2E8F0;
-      --gray-300: #94A3B8;
-      --gray-500: #64748B;
-      --gray-700: #334155;
-      
-      --radius-sm: 8px;
-      --radius-md: 20px;
-      --radius-lg: 32px;
-      --radius-full: 9999px;
-      
-      --shadow-sm: 0 4px 6px -1px rgba(11, 19, 43, 0.05);
-      --shadow-md: 0 10px 25px -5px rgba(11, 19, 43, 0.1);
-      --shadow-lg: 0 25px 50px -12px rgba(11, 19, 43, 0.15);
-      
-      --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-      --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-      --font-heading: 'Space Grotesk', sans-serif;
-    }
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-body);
-      color: var(--gray-700);
-      background-color: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { text-decoration: none; color: inherit; transition: var(--transition); }
-    ul { list-style: none; }
-    img { max-width: 100%; height: auto; display: block; }
-
-    .container {
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* =========================================
-       TYPOGRAPHY
-    ========================================= */
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      line-height: 1.1;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--navy-light);
-      margin-bottom: 16px;
-    }
-
-    .eyebrow::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--yellow);
-    }
-
-    /* =========================================
-       BUTTONS
-    ========================================= */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 32px;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      border-radius: var(--radius-full);
-      border: none;
-      cursor: pointer;
-      transition: var(--transition-bounce);
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary {
-      background-color: var(--yellow);
-      color: var(--navy);
-      box-shadow: 0 4px 15px var(--yellow-glow);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--yellow-hover);
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 10px 25px var(--yellow-glow);
-    }
-
-    /* =========================================
-       HEADER / NAVBAR (FLOATING PILL STYLE)
-    ========================================= */
-    .site-header {
-      position: fixed;
-      top: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 48px);
-      max-width: 1280px;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-    }
-
-    .site-header.scrolled {
-      top: 12px;
-      box-shadow: var(--shadow-lg);
-      background: rgba(255, 255, 255, 0.95);
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 32px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      font-family: var(--font-heading);
-    }
-
-    .logo-text strong {
-      font-size: 1.25rem;
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    .logo-text span {
-      font-size: 0.85rem;
-      color: var(--yellow-hover);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 1001;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 3px;
-      background-color: var(--navy);
-      border-radius: 3px;
-      transition: var(--transition);
-      margin: 4px 0;
-    }
-
-    .primary-nav {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .nav-list {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy-mid);
-      border-radius: var(--radius-full);
-      transition: var(--transition);
-    }
-
-    .nav-link:hover, .nav-item.active .nav-link {
-      background: var(--off-white);
-      color: var(--navy);
-    }
-
-    .nav-arrow svg {
-      width: 10px;
-      height: 10px;
-      transition: var(--transition);
-    }
-
-    .nav-item:hover .nav-arrow svg {
-      transform: rotate(180deg);
-    }
-
-    /* Modern Dropdown */
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%) translateY(10px) scale(0.95);
-      background: var(--white);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-lg);
-      padding: 16px;
-      min-width: 240px;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition-bounce);
-      border: 1px solid var(--gray-100);
-      transform-origin: top center;
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 16px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--gray-700);
-      border-radius: var(--radius-sm);
-      transition: var(--transition);
-    }
-
-    .dropdown-menu a:hover {
-      background: var(--off-white);
-      color: var(--navy);
-      padding-left: 24px;
-    }
-
-    /* Mega Menu */
-    .mega-menu {
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%) translateY(10px) scale(0.95);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      padding: 32px;
-      min-width: 900px;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition-bounce);
-      border: 1px solid var(--gray-100);
-      transform-origin: top center;
-      max-height: 70vh;
-      overflow-y: auto;
-    }
-
-    .nav-item:hover .mega-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-
-    .mega-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--gray-100);
-      position: sticky;
-      top: 0;
-      background: var(--white);
-      z-index: 2;
-    }
-
-    .mega-header-title {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      color: var(--navy);
-    }
-
-    .mega-search {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--off-white);
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      border: 1px solid var(--gray-100);
-    }
-
-    .mega-search svg { width: 16px; height: 16px; color: var(--gray-500); }
-    .mega-search input {
-      border: none; background: transparent; font-size: 0.9rem; outline: none; width: 200px; font-family: var(--font-body);
-    }
-
-    .mega-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .mega-group h4 {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--yellow-hover);
-      margin-bottom: 12px;
-    }
-
-    .mega-group a {
-      display: block;
-      padding: 6px 0;
-      font-size: 0.85rem;
-      color: var(--gray-500);
-    }
-
-    .mega-group a:hover { color: var(--navy); padding-left: 6px; }
-
-    /* =========================================
-       SUBPAGE HERO
-    ========================================= */
-    .subpage-hero {
-      position: relative;
-      min-height: 35vh;
-      display: flex;
-      align-items: center;
-      background: var(--navy);
-      padding-top: 140px;
-      padding-bottom: 80px;
-      overflow: hidden;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      color: var(--white);
-      max-width: 900px;
-      /* Animation removed for immediate visibility */
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: var(--gray-300);
-      margin-bottom: 24px;
-      font-weight: 600;
-    }
-
-    .breadcrumb a { color: var(--yellow); }
-    .breadcrumb a:hover { text-decoration: underline; }
-
-    .hero-title {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-
-    /* =========================================
-       ARTICLE / PROSE LAYOUT
-    ========================================= */
-    .article-section {
-      padding: 80px 0;
-    }
-
-    .prose {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--white);
-      padding: 60px;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-100);
-    }
-
-    /* Headings */
-    .prose h1 {
-      font-size: 2.2rem;
-      margin-bottom: 24px;
-      color: var(--navy);
-      border-bottom: 2px solid var(--yellow);
-      padding-bottom: 16px;
-    }
-
-    .prose h2 {
-      font-size: 1.6rem;
-      margin-top: 48px;
-      margin-bottom: 20px;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .prose h2::before {
-      content: '';
-      display: block;
-      width: 8px;
-      height: 8px;
-      background: var(--yellow);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .prose p {
-      font-size: 1.05rem;
-      color: var(--gray-700);
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-
-    .prose strong {
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    /* Lists */
-    .prose ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 8px 24px;
-      margin-bottom: 24px;
-      margin-top: 16px;
-    }
-
-    .prose ul li {
-      font-size: 0.95rem;
-      color: var(--gray-700);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 8px 12px;
-      background: var(--off-white);
-      border-radius: var(--radius-sm);
-      transition: var(--transition);
-      border: 1px solid transparent;
-    }
-
-    .prose ul li:hover {
-      background: var(--white);
-      border-color: var(--yellow);
-      transform: translateX(4px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .prose ul li::before {
-      content: '\f00c';
-      font-family: 'Font Awesome 6 Free';
-      font-weight: 900;
-      color: var(--yellow-hover);
-      font-size: 0.75rem;
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
-
-    /* Blockquote / Highlight */
-    .prose blockquote {
-      background: var(--off-white);
-      border-left: 4px solid var(--yellow);
-      padding: 20px 24px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 32px 0;
-      font-style: italic;
-      color: var(--navy-mid);
-    }
-
-    .prose blockquote p {
-      margin-bottom: 0;
-    }
-
-    /* CTA Box inside prose */
-    .prose-cta {
-      background: var(--navy);
-      color: var(--white);
-      padding: 32px;
-      border-radius: var(--radius-md);
-      margin-top: 48px;
-      text-align: center;
-    }
-
-    .prose-cta p {
-      color: var(--gray-300);
-      margin-bottom: 20px;
-    }
-
-    .prose-cta .btn {
-      background: var(--yellow);
-      color: var(--navy);
-    }
-
-    /* Scroll Reveal Class (Hidden initially, but JS will force show) */
-    .reveal {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Fallback: If JS fails, show content anyway */
-    .no-js .reveal {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-    .site-footer {
-      background: var(--navy);
-      color: var(--gray-300);
-      padding: 80px 0 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: 48px;
-      padding-bottom: 60px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .footer-brand .logo-text strong { color: var(--white); }
-
-    .footer-brand p {
-      margin-top: 20px;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--gray-500);
-    }
-
-    .footer-col h4 {
-      color: var(--white);
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      color: var(--gray-500);
-      font-size: 0.95rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--yellow);
-      padding-left: 4px;
-    }
-
-    .footer-contact li {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-      color: var(--gray-500);
-    }
-
-    .footer-contact i {
-      color: var(--yellow);
-      margin-top: 4px;
-    }
-
-    .footer-bottom {
-      padding: 24px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.85rem;
-      color: var(--gray-500);
-      text-align: center;
-    }
-
-    /* =========================================
-       FLOATING WHATSAPP
-    ========================================= */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      width: 64px;
-      height: 64px;
-      background: #25D366;
-      color: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      transition: var(--transition-bounce);
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1) rotate(10deg);
-    }
-
-    /* =========================================
-       RESPONSIVE DESIGN
-    ========================================= */
-    @media (max-width: 1024px) {
-      .site-header { width: calc(100% - 32px); top: 16px; }
-      .header-inner { padding: 12px 24px; }
-      .nav-toggle { display: block; }
-      
-      .primary-nav {
-        position: fixed;
-        top: 0; 
-        right: -120%;
-        width: 100%; 
-        height: 100vh;
-        background: var(--white);
-        flex-direction: column;
-        padding: 120px 24px 40px;
-        transition: var(--transition);
-        overflow-y: auto;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-      }
-      .primary-nav.open { right: 0; }
-      
-      .nav-list { flex-direction: column; width: 100%; gap: 8px; align-items: flex-start; }
-      .nav-item { width: 100%; }
-      .nav-link { width: 100%; justify-content: space-between; padding: 16px; font-size: 1.1rem; color: var(--navy); }
-      
-      .dropdown-menu, .mega-menu {
-        position: static;
-        transform: none;
-        opacity: 1; visibility: visible;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 0 16px;
-        max-height: 0; overflow: hidden;
-        transition: max-height 0.4s ease;
-        display: block; min-width: auto;
-        width: 100%;
-        background: transparent;
-      }
-      
-      .dropdown-menu a, .mega-group a, .mega-header-title, .mega-group h4 {
-        color: var(--gray-700) !important;
-      }
-      
-      .dropdown-menu a:hover, .mega-group a:hover {
-        color: var(--navy) !important;
-        background: var(--off-white);
-      }
-
-      .nav-item.open .dropdown-menu, .nav-item.open .mega-menu {
-        max-height: 1000px;
-      }
-      .mega-grid { grid-template-columns: 1fr; }
-      
-      .prose { padding: 32px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .prose { padding: 24px; }
-      .prose ul { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-    }
-  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../assets/imgs/favicon.png">
+
+  <!-- Port Pages CSS -->
+  <link rel="stylesheet" href="../assets/css/port-pages.css">
 </head>
 <body>
 
@@ -750,7 +34,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a class="logo" href="../index.html">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B132B'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='40' font-weight='bold' fill='%23FFD166' text-anchor='middle' dominant-baseline='middle'%3ESL%3C/text%3E%3C/svg%3E" alt="ShipChandler Libya Logo" width="40" height="40">
+        <img src="../assets/imgs/logo-shipchandler-libya.png" alt="ShipChandler Libya Logo" width="40" height="40">
         <span class="logo-text">
           <strong>ShipChandler</strong>
           <span>Libya</span>
@@ -776,7 +60,7 @@
               <a href="../services.html#safety">Safety & PPE</a>
             </div>
           </li>
-          <li class="nav-item has-dropdown active">
+          <li class="nav-item has-dropdown">
             <a class="nav-link" href="javascript:void(0)">Ports <span class="nav-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></a>
             <div class="mega-menu">
               <div class="mega-header">
@@ -801,37 +85,33 @@
   <main>
     <!-- SUBPAGE HERO -->
     <section class="subpage-hero">
+      <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop" alt="Bissau Ship Chandler - Guinea" class="subpage-hero-bg">
       <div class="container">
         <div class="hero-content">
           <ul class="breadcrumb">
             <li><a href="../index.html">Home</a></li>
             <li><span>/</span></li>
-            <li>Ports</li>
+            <li><a href="../index.html#ports">Ports</a></li>
             <li><span>/</span></li>
-            <li>Bissau</li>
+            <li>Bissau Ship Chandler - Guinea</li>
           </ul>
-          <span class="eyebrow" style="color: var(--yellow);">Bissau Port Operations</span>
           <h1 class="hero-title">Bissau Ship Chandler - Guinea</h1>
+          <p class="hero-desc">Professional ship supply, provisions, bonded stores, deck and engine stores, safety equipment, spare parts and marine procurement services.</p>
         </div>
       </div>
     </section>
 
-    <!-- ARTICLE CONTENT -->
-    <section class="article-section">
+    <!-- PORT CONTENT SECTION -->
+    <section class="port-content">
       <div class="container">
-        <!-- Added 'active' class by default so it's visible even if JS fails -->
-        <div class="prose reveal active">
-          
-          <h1>Bissau Ship Chandler - Guinea</h1>
+        <article class="prose">
           <p>Bissau Ship Chandler - Guinea provides comprehensive ship chandling, marine procurement and vessel supply services for commercial ships calling at the local port, terminals and surrounding anchorage areas. Bissau Ship Chandler - Guinea works with ship owners, ship managers, vessel operators, captains, chief engineers, purchasing departments, technical superintendents and local agents who require reliable supplies within the limited time available during a port call.</p>
           <p>The main objective of Bissau Ship Chandler - Guinea is to provide one dependable point of contact for a broad range of vessel requirements. Whether a vessel requires fresh provisions, bonded stores, deck stores, engine stores, cabin and galley items, safety equipment, electrical materials, marine chemicals, tools, spare parts or urgent technical supplies, Bissau Ship Chandler - Guinea can coordinate sourcing and delivery according to the vessel's ETA, berth, anchorage position and operational schedule.</p>
           <p>Fast communication is essential in ship supply. Bissau Ship Chandler - Guinea therefore focuses on prompt RFQ handling, clear quotations, correct product identification, practical alternatives when requested items are unavailable and efficient coordination with the vessel or appointed agent. Advance requisitions are always recommended, but Bissau Ship Chandler - Guinea can also assist with urgent requirements when local availability and port conditions permit.</p>
-
           <h2>Professional Ship Supply Services by Bissau Ship Chandler - Guinea</h2>
           <p>Bissau Ship Chandler - Guinea provides ship supply support for a wide range of merchant and commercial vessels. Every order is reviewed according to the vessel's actual requirements, specifications, quantities and requested delivery time. The aim is to reduce the workload of the vessel's purchasing team by combining multiple categories of stores into one coordinated supply.</p>
           <p>Customers can send requisitions in Excel, PDF, Word or other commonly used formats. IMPA and ISSA references, maker names, model numbers, photographs, drawings and technical specifications can be included to help Bissau Ship Chandler - Guinea identify the correct products.</p>
           <p>The supply range of Bissau Ship Chandler - Guinea covers routine consumables as well as urgent and non-standard requirements. Where the exact requested brand is unavailable, Bissau Ship Chandler - Guinea can offer an alternative for customer approval before delivery.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Ship Provisions Supply</h2>
           <p>Bissau Ship Chandler - Guinea supplies fresh, chilled, frozen and dry provisions for vessel crews, galley departments and catering operations. Provision orders can be prepared according to crew nationality, preferred brands, pack sizes, dietary requirements and expected voyage duration.</p>
           <p>The provision range available through Bissau Ship Chandler - Guinea may include:</p>
@@ -861,7 +141,6 @@
           </ul>
           <p>Bissau Ship Chandler - Guinea understands that quality and freshness are particularly important for provision supply. Products are selected with attention to condition, shelf life, packaging and requested specifications. Where possible, fresh products are procured close to the required delivery time.</p>
           <p>For large provision orders, Bissau Ship Chandler - Guinea can coordinate the different categories so that chilled, frozen and dry goods are prepared for a single organized vessel delivery. Customers are encouraged to indicate any prohibited substitutions or mandatory brands directly in the requisition.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Bonded Stores and Crew Welfare Items</h2>
           <p>Bissau Ship Chandler - Guinea can arrange bonded stores and crew welfare items subject to local customs rules, port regulations and product availability. Bonded supply requirements should preferably be sent in advance because customs procedures may differ from ordinary provision or technical store deliveries.</p>
           <p>Bonded and welfare requirements handled by Bissau Ship Chandler - Guinea may include:</p>
@@ -876,7 +155,6 @@
             <li>Other requested bonded stores subject to local regulations</li>
           </ul>
           <p>Bissau Ship Chandler - Guinea coordinates bonded requirements with the vessel, purchasing department and, where necessary, the local agent. Availability and customs status are confirmed during the quotation process.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Deck Stores Supply</h2>
           <p>Bissau Ship Chandler - Guinea supplies deck departments with marine consumables, maintenance materials, mooring equipment, lifting accessories, tools and general deck stores. Products can be quoted by description, dimension, specification, IMPA reference or requested manufacturer.</p>
           <p>Deck stores supplied by Bissau Ship Chandler - Guinea may include:</p>
@@ -908,7 +186,6 @@
             <li>General deck maintenance consumables</li>
           </ul>
           <p>When lifting equipment or safety-related items are requested, Bissau Ship Chandler - Guinea asks customers to specify SWL, dimensions, material, required certification and applicable standard. This helps avoid delays caused by incomplete specifications.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Engine Stores Supply</h2>
           <p>Bissau Ship Chandler - Guinea supports chief engineers and engine departments with technical stores, workshop consumables, maintenance products and selected machinery spare parts. Correct identification is important for engine-room requirements, so detailed information should be provided whenever possible.</p>
           <p>The engine store range supplied by Bissau Ship Chandler - Guinea may include:</p>
@@ -945,7 +222,6 @@
             <li>Selected machinery spare parts</li>
           </ul>
           <p>For technical items, Bissau Ship Chandler - Guinea recommends providing maker, model, serial number, OEM part number, dimensions, material specification, drawings or clear photographs. This information enables the procurement team to identify the requested item more accurately and reduce the risk of incorrect supply.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Cabin and Galley Stores</h2>
           <p>Bissau Ship Chandler - Guinea provides accommodation, cabin and galley departments with everyday consumables and equipment required for crew comfort and vessel operations.</p>
           <p>Cabin and galley stores available through Bissau Ship Chandler - Guinea may include:</p>
@@ -976,7 +252,6 @@
             <li>Crew welfare products</li>
           </ul>
           <p>Bissau Ship Chandler - Guinea can combine cabin, galley and provision requirements into a single coordinated order, helping the vessel reduce the number of separate suppliers involved during the port call.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Safety Equipment and PPE</h2>
           <p>Bissau Ship Chandler - Guinea can supply personal protective equipment and selected marine safety products required for routine vessel operations and maintenance.</p>
           <p>Safety supplies may include:</p>
@@ -1001,7 +276,6 @@
             <li>Other marine PPE</li>
           </ul>
           <p>Where certification or a particular international standard is mandatory, the customer should state this clearly in the RFQ. Bissau Ship Chandler - Guinea can then check availability against the requested specification before confirming the order.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Electrical Stores and Consumables</h2>
           <p>Bissau Ship Chandler - Guinea sources electrical stores for deck, engine-room, workshop and accommodation requirements. The supply range can include both common consumables and selected technical components.</p>
           <p>Electrical stores supplied by Bissau Ship Chandler - Guinea may include:</p>
@@ -1028,7 +302,6 @@
             <li>Other electrical consumables</li>
           </ul>
           <p>For specialized electrical equipment, Bissau Ship Chandler - Guinea recommends providing voltage, frequency, rating, maker, model and photographs of the existing component.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Marine Chemicals and Cleaning Products</h2>
           <p>Bissau Ship Chandler - Guinea can provide marine and industrial chemicals for routine maintenance, cleaning and vessel operations. Chemical products are supplied according to availability and the technical requirements stated by the customer.</p>
           <p>Marine chemicals may include:</p>
@@ -1047,7 +320,6 @@
             <li>Specialized detergents</li>
           </ul>
           <p>Where applicable, Safety Data Sheets can be requested. Bissau Ship Chandler - Guinea recommends specifying the intended application, required pack size and preferred brand or equivalent when ordering chemicals.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Welding Equipment and Workshop Consumables</h2>
           <p>Bissau Ship Chandler - Guinea can source welding and workshop materials for routine repairs and maintenance carried out by the vessel's crew.</p>
           <p>Products may include:</p>
@@ -1070,7 +342,6 @@
             <li>General repair consumables</li>
           </ul>
           <p>Industrial gases and other regulated products are subject to local rules, cylinder arrangements and availability. Bissau Ship Chandler - Guinea confirms such requirements individually.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Marine Spare Parts and Technical Procurement</h2>
           <p>In addition to ordinary ship stores, Bissau Ship Chandler - Guinea can assist customers with marine spare parts and technical procurement. The exact scope depends on the equipment, manufacturer, required delivery time and local or international availability.</p>
           <p>Technical procurement through Bissau Ship Chandler - Guinea may include:</p>
@@ -1096,11 +367,9 @@
           </ul>
           <p>To obtain an accurate quotation, customers should provide as much technical information as possible. Bissau Ship Chandler - Guinea can work from maker and model information, serial numbers, nameplate photographs, OEM references, IMPA codes, technical drawings and sample photographs.</p>
           <p>If an exact item cannot be sourced within the vessel's port stay, Bissau Ship Chandler - Guinea may propose an alternative solution or advise on the realistic delivery lead time.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Nautical Charts and Marine Publications</h2>
           <p>Subject to local availability, Bissau Ship Chandler - Guinea can assist vessels with nautical charts, marine publications and operational reference materials.</p>
           <p>Customers should provide the publication title, number, edition and required quantity. Advance notice is recommended for specialized publications.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Tools, Hardware and Technical Materials</h2>
           <p>Bissau Ship Chandler - Guinea supplies a wide selection of tools and general technical materials required for routine shipboard maintenance.</p>
           <p>The range may include:</p>
@@ -1125,11 +394,9 @@
             <li>General marine hardware</li>
           </ul>
           <p>Non-standard items can be sourced against detailed specifications. Bissau Ship Chandler - Guinea encourages customers to attach photographs or drawings when the item cannot be clearly identified from a written description alone.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Technical and Repair Support</h2>
           <p>Depending on local availability, Bissau Ship Chandler - Guinea can coordinate selected technical services and repair support through local specialists and service partners. The scope may include mechanical, electrical, piping, welding and other routine vessel requirements.</p>
           <p>Technical service requests should contain a clear description of the problem, vessel details, equipment information, photographs and the required completion time. Bissau Ship Chandler - Guinea can then evaluate availability and coordinate the appropriate local support.</p>
-
           <h2>Urgent Ship Supply by Bissau Ship Chandler - Guinea</h2>
           <p>Vessel schedules frequently change and urgent requirements can arise shortly before arrival or departure. Bissau Ship Chandler - Guinea understands the importance of rapid communication in these situations.</p>
           <p>For urgent orders, Bissau Ship Chandler - Guinea works to coordinate sourcing, preparation and delivery according to:</p>
@@ -1144,7 +411,6 @@
             <li>Required sailing time</li>
           </ul>
           <p>Urgent RFQs should clearly state the final delivery deadline. The earlier Bissau Ship Chandler - Guinea receives the complete requisition and vessel information, the better the possibility of arranging all requested items before departure.</p>
-
           <h2>Vessels Supported by Bissau Ship Chandler - Guinea</h2>
           <p>Bissau Ship Chandler - Guinea can provide ship chandling and marine procurement support for many vessel types, including:</p>
           <ul>
@@ -1169,7 +435,6 @@
             <li>Other merchant and commercial ships</li>
           </ul>
           <p>Each vessel has different operational requirements. Bissau Ship Chandler - Guinea therefore handles every requisition individually rather than relying on a fixed standard package.</p>
-
           <h2>How to Send an RFQ to Bissau Ship Chandler - Guinea</h2>
           <p>For the fastest quotation, customers should send Bissau Ship Chandler - Guinea the complete requisition together with the main vessel and delivery details.</p>
           <p>Please include:</p>
@@ -1193,7 +458,6 @@
             <li>Photographs or drawings for technical items</li>
           </ul>
           <p>A complete RFQ allows Bissau Ship Chandler - Guinea to respond faster and reduces the need for repeated clarification.</p>
-
           <h2>Why Choose Bissau Ship Chandler - Guinea?</h2>
           <p>The role of a ship chandler is not simply to sell products. Successful vessel supply requires procurement, product identification, quality checking, packing, documentation, transportation and coordination with the vessel's limited port schedule.</p>
           <p>Bissau Ship Chandler - Guinea aims to provide:</p>
@@ -1214,33 +478,20 @@
             <li>Support for non-standard technical requirements</li>
           </ul>
           <p>By working with Bissau Ship Chandler - Guinea, customers can reduce the number of separate suppliers involved in a port call and coordinate multiple vessel departments through one contact.</p>
-
           <h2>Quality Control and Order Coordination</h2>
           <p>Before delivery, Bissau Ship Chandler - Guinea aims to check quantities, visible condition, packaging and conformity with the confirmed order. For provisions, attention is given to freshness and shelf life. For technical products, part numbers, sizes and specifications are checked against the information available in the purchase order.</p>
           <p>If a requested product must be substituted, Bissau Ship Chandler - Guinea seeks customer approval whenever practical before dispatch. Clear communication between the supplier, vessel and purchasing department helps prevent unnecessary delays.</p>
-
           <h2>Long-Term Cooperation with Bissau Ship Chandler - Guinea</h2>
           <p>Bissau Ship Chandler - Guinea welcomes cooperation with ship owners, ship management companies, fleet purchasing departments, technical managers, charterers, marine operators and vessel agents.</p>
           <p>For customers with regular vessel calls, Bissau Ship Chandler - Guinea can work with recurring product lists, preferred brands and purchasing procedures. Long-term cooperation helps improve response time and makes future quotations more efficient because the vessel's usual requirements become familiar.</p>
-
           <h2>Request a Quotation from Bissau Ship Chandler - Guinea</h2>
           <p>Send your complete vessel requisition to Bissau Ship Chandler - Guinea for review and quotation. Whether the requirement is a routine provision order, deck and engine stores, urgent spare parts or a combined vessel supply, Bissau Ship Chandler - Guinea will evaluate availability and coordinate the order according to the vessel's schedule.</p>
           <p>Advance RFQs are recommended whenever possible, particularly for technical equipment, large quantities, bonded stores and non-standard spare parts.</p>
-
           <h2>Bissau Ship Chandler - Guinea – Your Marine Supply Partner</h2>
           <p>For provisions, bonded stores, deck stores, engine stores, cabin and galley supplies, safety equipment, electrical stores, marine chemicals, tools, workshop consumables, spare parts, publications and technical procurement, contact Bissau Ship Chandler - Guinea.</p>
           <p>Bissau Ship Chandler - Guinea is ready to support vessels with professional ship chandling, responsive communication, practical sourcing and coordinated marine supply.</p>
-          
-          <blockquote>
-            <p><strong>Bissau Ship Chandler - Guinea – Professional Ship Supply, Marine Stores, Provisions & Technical Procurement.</strong></p>
-          </blockquote>
-
-          <div class="prose-cta">
-            <p>Ready to send your requisition to Bissau?</p>
-            <a href="../request-quote.html" class="btn">Request a Quote Now <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-        </div>
+          <p><strong>Bissau Ship Chandler - Guinea – Professional Ship Supply, Marine Stores, Provisions & Technical Procurement.</strong></p>
+        </article>
       </div>
     </section>
   </main>
@@ -1251,7 +502,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="../index.html">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FFD166'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='40' font-weight='bold' fill='%230B132B' text-anchor='middle' dominant-baseline='middle'%3ESL%3C/text%3E%3C/svg%3E" alt="Logo" width="40" height="40">
+            <img src="../assets/imgs/logo-shipchandler-libya.png" alt="Logo" width="40" height="40">
             <span class="logo-text">
               <strong>ShipChandler</strong>
               <span style="color: var(--yellow);">Libya</span>
@@ -1286,7 +537,7 @@
           <h4>Contact Us</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Misurata Seaport, Qasr Ahmed, Misurata, Libya</li>
-            <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2482743244" style="color:inherit;">+248 2 743 244</a></li>
             <li><i class="fas fa-envelope"></i> <a href="mailto:sales@shipchandlerlibya.com" style="color:inherit;">sales@shipchandlerlibya.com</a></li>
             <li><i class="fas fa-user-tie"></i> Omar Ali (Operations Manager)</li>
           </ul>
@@ -1294,7 +545,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
+        <div style="text-align:center; width:100%;">&copy; 2026 SHIP CHANDLER LIBYA CO., LTD. All rights reserved.</div>
       </div>
     </div>
   </footer>
@@ -1304,118 +555,7 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script>
-    // --- Port List Data for Dropdown ---
-    const ports = [
-      "Ship Chandler Dar Es Salaam", "Ship Chandler Apapa", "Ship Chandler Onne Port Nigeria", "San Pedro Ship Supply Chandler",
-      "Ship Chandler Abidjan", "Ship Chandler Freetown", "Monrovia Ship Chandler", "Ship Chandler Maputo", "Ship Chandler Matadi",
-      "Ship Chandler Beira", "Ship Chandler Angola", "Ship Chandler Lobito", "ShipChandler Lome", "Shipchandler Lome",
-      "Ivory Coast Ship Chandler", "Nouadhibou Ship Chandler", "Ship Chandler Luanda", "Ship Chandler Cape Verde",
-      "Ship Chandler Gabon", "Ship Chandler Namibia", "Walvis Bay Ship Chandler", "Ship Chandler Gentil Port - Gabon",
-      "Ship Chandler Takoradi", "Ship Chandler Congo", "Shipchandler Lagos", "Ship Chandler Port Ambon",
-      "Shipchandler Pointe Noire", "Ship Chandler Djibouti", "Ship Chandler Cabinda", "Ship Chandler Tema",
-      "Ship Chandler Mindelo", "Ship Chandler Casablanca", "Ship Chandler Safi Port Morocco", "Ship Chandler Kamsar",
-      "Ship Chandler Soyo", "Dakar Ship Chandler", "Ship Chandler Senegal", "Ship Chandler Dakar", "Bissau Ship Chandler - Guinea",
-      "Conakry Ship Chandler", "Ship Chandler Cotonou", "Douala Ship Chandler", "Liberia Ship Chandler", "Namibia Ship Chandler",
-      "Ship Chandler Dakar", "Ship Chandler Mombasa", "Ship Chandlers Saldanha Bay", "Ship Chandler Owendo", "Ship Chandlers Richards Bay"
-    ];
-
-    // Populate Mega Menu
-    const megaList = document.getElementById('mega-port-list');
-    const half = Math.ceil(ports.length / 2);
-    const col1 = ports.slice(0, half);
-    const col2 = ports.slice(half);
-
-    function createPortGroup(title, items) {
-      const group = document.createElement('div');
-      group.className = 'mega-group';
-      group.innerHTML = `<h4>${title}</h4>`;
-      items.forEach(port => {
-        const a = document.createElement('a');
-        a.href = `../ports/${port.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html`;
-        a.textContent = port;
-        group.appendChild(a);
-      });
-      return group;
-    }
-
-    const grid = document.createElement('div');
-    grid.className = 'mega-grid';
-    grid.appendChild(createPortGroup('African Ports (A-M)', col1));
-    grid.appendChild(createPortGroup('African Ports (N-Z)', col2));
-    megaList.appendChild(grid);
-
-    // Mega Menu Search
-    document.getElementById('mega-port-search').addEventListener('input', function(e) {
-      const query = e.target.value.toLowerCase();
-      const allLinks = megaList.querySelectorAll('a');
-      const groups = megaList.querySelectorAll('.mega-group');
-      
-      allLinks.forEach(link => {
-        const text = link.textContent.toLowerCase();
-        link.style.display = text.includes(query) ? 'block' : 'none';
-      });
-
-      groups.forEach(group => {
-        const hasVisible = Array.from(group.querySelectorAll('a')).some(a => a.style.display !== 'none');
-        group.style.display = hasVisible ? 'block' : 'none';
-      });
-    });
-
-    // --- Sticky Header ---
-    const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // --- Mobile Nav Toggle ---
-    const navToggle = document.querySelector('.nav-toggle');
-    const primaryNav = document.querySelector('.primary-nav');
-    
-    navToggle.addEventListener('click', function() {
-      primaryNav.classList.toggle('open');
-      const spans = this.querySelectorAll('span');
-      if(primaryNav.classList.contains('open')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-      }
-    });
-
-    // --- Mobile Dropdown Toggles ---
-    const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
-      link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 1024) {
-          e.preventDefault();
-          item.classList.toggle('open');
-        }
-      });
-    });
-
-    // --- Scroll Reveal (Will only apply to future elements without 'active' class) ---
-    const revealElements = document.querySelectorAll('.reveal:not(.active)');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    });
-    revealElements.forEach(el => revealObserver.observe(el));
-  </script>
+  <!-- Port Pages JS -->
+  <script src="../assets/js/port-pages.js"></script>
 </body>
 </html>
