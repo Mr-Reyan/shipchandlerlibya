@@ -915,6 +915,110 @@
             transform: scale(1.1) rotate(10deg);
         }
 
+        /* Footer WhatsApp Button */
+        .hero-whatsapp-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0B132B;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid rgba(255, 209, 102, 0.15);
+            max-width: fit-content;
+        }
+
+        .hero-whatsapp-bar:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(255, 209, 102, 0.25);
+            border-color: rgba(255, 209, 102, 0.3);
+        }
+
+        .hero-whatsapp-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: #25D366;
+            border-radius: 50%;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .hero-whatsapp-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero-whatsapp-tag {
+            color: #25D366;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-whatsapp-num {
+            color: var(--yellow);
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .hero-whatsapp-arrow {
+            color: var(--yellow);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-left: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-whatsapp-bar {
+                padding: 8px 16px;
+                gap: 6px;
+            }
+
+            .hero-whatsapp-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .hero-whatsapp-icon svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .hero-whatsapp-tag {
+                font-size: 0.7rem;
+            }
+
+            .hero-whatsapp-num {
+                font-size: 0.8rem;
+            }
+
+            .hero-whatsapp-arrow {
+                font-size: 1rem;
+                margin-left: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-whatsapp-bar {
+                padding: 8px 14px;
+                gap: 5px;
+            }
+
+            .hero-whatsapp-tag {
+                font-size: 0.65rem;
+            }
+
+            .hero-whatsapp-num {
+                font-size: 0.75rem;
+            }
+        }
+
         /* =========================================
        RESPONSIVE DESIGN
     ========================================= */
@@ -1250,7 +1354,7 @@
                                 <div>
                                     <span class="eyebrow">Category 01</span>
                                     <h2>Ship Provisions Supply Libya Port</h2>
-                                    <p>Ship Chandler Libya Port supplies fresh, chilled, frozen, and dry provisions to support vessel crews and galley requirements across Libyan ports. Provision orders can be prepared according to crew nationality, vessel requirements, requested brands, and pack sizes. High-quality food provision supply ensures the crew remains well-fed and operational throughout the voyage. Sourcing reliable ship provisions in Libya requires careful attention to cold-chain logistics and shelf-life management. The procurement process guarantees that all food stores, including fresh produce, meats, and dry goods, meet stringent hygiene standards before delivery to the vessel. Fast coordination of food supply directly to the berth or anchorage minimizes disruption to the vessel's schedule.</p>
+                                    <p>Ship Chandler Libya Port Provisions supply fresh, chilled, frozen, and dry provisions to support vessel crews and galley requirements across Libyan ports. Provision orders can be prepared according to crew nationality, vessel requirements, requested brands, and pack sizes. High-quality food provision supply ensures the crew remains well-fed and operational throughout the voyage. Sourcing reliable ship provisions in Libya requires careful attention to cold-chain logistics and shelf-life management. The procurement process guarantees that all food stores, including fresh produce, meats, and dry goods, meet stringent hygiene standards before delivery to the vessel. Fast coordination of food supply directly to the berth or anchorage minimizes disruption to the vessel's schedule.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1295,7 +1399,7 @@
                                 <div>
                                     <span class="eyebrow">Category 02</span>
                                     <h2>Bonded Stores Supply</h2>
-                                    <p>Bonded and duty-free provisions can be supplied subject to applicable customs and Libyan port regulations. Ship Chandler Libya Port coordinates necessary customs clearances and delivery permits directly to the vessel. A reliable bond store supply chain ensures crew welfare items and duty-free goods are delivered efficiently and compliantly. Navigating local customs procedures for bonded stores requires experienced coordination. The vessel supply service manages all necessary documentation to guarantee a smooth transfer of tobacco, confectionery, and personal care items. Strict adherence to port authority guidelines ensures that the bond store supply process is seamless, allowing the crew to receive essential welfare products without delays during the port call.</p>
+                                    <p>Ship Chandler Libya Port bonded stores supply Bonded and duty-free provisions to applicable customs and Libyan port regulations. Ship Chandler Libya Port coordinates necessary customs clearances and delivery permits directly to the vessel. A reliable bond store supply chain ensures crew welfare items and duty-free goods are delivered efficiently and compliantly. Navigating local customs procedures for bonded stores requires experienced coordination. The vessel supply service manages all necessary documentation to guarantee a smooth transfer of tobacco, confectionery, and personal care items. Strict adherence to port authority guidelines ensures that the bond store supply process is seamless, allowing the crew to receive essential welfare products without delays during the port call.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1329,7 +1433,7 @@
                                 <div>
                                     <span class="eyebrow">Category 03</span>
                                     <h2>Deck Stores Supply</h2>
-                                    <p>The deck department can source and supply a wide range of deck consumables and equipment for vessels in Libya. Deck store products can be quoted according to IMPA references, dimensions, SWL, material specifications, required certificates, or preferred manufacturers. High-quality deck supplies are essential for safe mooring, cargo handling, and routine vessel maintenance. Ensuring the availability of heavy-duty mooring ropes, wire ropes, and lifting accessories is critical for maritime safety. The ship chandler service verifies that all deck equipment meets required load capacities and safety certifications. From marine paints and coatings to cargo securing materials, the comprehensive deck supply ensures the vessel is fully equipped for challenging operational environments.</p>
+                                    <p>Ship Chandler Libya Port deck department can source and supply a wide range of deck consumables and equipment for vessels in Libya. Deck store products can be quoted according to IMPA references, dimensions, SWL, material specifications, required certificates, or preferred manufacturers. High-quality deck supplies are essential for safe mooring, cargo handling, and routine vessel maintenance. Ensuring the availability of heavy-duty mooring ropes, wire ropes, and lifting accessories is critical for maritime safety. The ship chandler service verifies that all deck equipment meets required load capacities and safety certifications. From marine paints and coatings to cargo securing materials, the comprehensive deck supply ensures the vessel is fully equipped for challenging operational environments.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1462,7 +1566,7 @@
                                 <div>
                                     <span class="eyebrow">Category 06</span>
                                     <h2>Safety & PPE Supply</h2>
-                                    <p>Safety and personal protective equipment can be supplied according to vessel requirements and international standards. Where certification is required, the applicable standard or certificate requirement should be specified in the RFQ. A comprehensive range of safety equipment and PPE ensures the well-being of the crew and compliance with maritime safety regulations. The ship supply service prioritizes the availability of certified safety gear, including hard hats, safety harnesses, and fire-fighting related products. Sourcing durable coveralls, protective gloves, and respiratory protection is essential for hazardous onboard tasks. Ensuring strict adherence to SOLAS and international safety standards protects the crew and mitigates operational risks at sea.</p>
+                                    <p>Ship Chandler Libya Port can supply Safety and personal protective equipment according to vessel requirements and international standards. Where certification is required, the applicable standard or certificate requirement should be specified in the RFQ. A comprehensive range of safety equipment and PPE ensures the well-being of the crew and compliance with maritime safety regulations. The ship supply service prioritizes the availability of certified safety gear, including hard hats, safety harnesses, and fire-fighting related products. Sourcing durable coveralls, protective gloves, and respiratory protection is essential for hazardous onboard tasks. Ensuring strict adherence to SOLAS and international safety standards protects the crew and mitigates operational risks at sea.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1543,7 +1647,7 @@
                                 <div>
                                     <span class="eyebrow">Category 08</span>
                                     <h2>Marine Chemicals Supply</h2>
-                                    <p>Marine and industrial chemicals can be supplied for vessel maintenance, water treatment, and operational requirements. Product specifications and Safety Data Sheets (SDS) can be provided where applicable. Ship Chandler Libya Port sources quality marine chemicals, including degreasers and tank cleaning products, to maintain vessel hygiene and operational readiness. The vessel supply service ensures the availability of specialized descaling chemicals and water-treatment solutions essential for engine room efficiency. Providing safe and effective maintenance chemicals, along with necessary documentation, supports the crew in performing critical cleaning and preservation tasks. Reliable access to marine chemicals maintains a safe and compliant working environment onboard</p>
+                                    <p>At Ship Chandler Libya Port, Marine and industrial chemicals can be supplied for vessel maintenance, water treatment, and operational requirements. Product specifications and Safety Data Sheets (SDS) can be provided where applicable. Ship Chandler Libya Port sources quality marine chemicals, including degreasers and tank cleaning products, to maintain vessel hygiene and operational readiness. The vessel supply service ensures the availability of specialized descaling chemicals and water-treatment solutions essential for engine room efficiency. Providing safe and effective maintenance chemicals, along with necessary documentation, supports the crew in performing critical cleaning and preservation tasks. Reliable access to marine chemicals maintains a safe and compliant working environment onboard</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1620,7 +1724,7 @@
                                 <div>
                                     <span class="eyebrow">Category 10</span>
                                     <h2>Marine Spare Parts & Technical Procurement</h2>
-                                    <p>The procurement team can assist with standard and non-standard marine spare parts and technical equipment. For faster identification, please provide maker, equipment model, serial number, OEM part number, IMPA reference, dimensions, drawings, or clear photographs. Sourcing quality marine spare parts for main engines, pumps, and compressors is critical to minimizing vessel downtime and ensuring operational reliability. The technical procurement service specializes in identifying exact replacement components, including electric motors, refrigeration parts, and hydraulic equipment. Reliable access to OEM and alternative spare parts supports the engineering department in executing timely overhauls and repairs, keeping the vessel compliant and operational.</p>
+                                    <p>Procurement team at Ship Chandler Libya Port can assist with standard and non-standard marine spare parts and technical equipment. For faster identification, please provide maker, equipment model, serial number, OEM part number, IMPA reference, dimensions, drawings, or clear photographs. Sourcing quality marine spare parts for main engines, pumps, and compressors is critical to minimizing vessel downtime and ensuring operational reliability. The technical procurement service specializes in identifying exact replacement components, including electric motors, refrigeration parts, and hydraulic equipment. Reliable access to OEM and alternative spare parts supports the engineering department in executing timely overhauls and repairs, keeping the vessel compliant and operational.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1661,7 +1765,7 @@
                                 <div>
                                     <span class="eyebrow">Category 11</span>
                                     <h2>Nautical Charts & Publications</h2>
-                                    <p>Subject to availability, Ship Chandler Libya Port can assist vessels with nautical charts, marine publications, and operational reference materials required for their voyage. Access to up-to-date nautical charts and publications is essential for safe navigation and compliance with international maritime regulations. The ship supply service provides official vessel logbooks and record books to ensure mandatory documentation is accurately maintained. Sourcing the latest IMO, SOLAS, MARPOL, and STCW publications guarantees the vessel operates within current legal frameworks. Reliable supply of navigational notices and flag sets supports safe and efficient global transit.
+                                    <p>Ship Chandler Libya Port can assist vessels with nautical charts, marine publications, and operational reference materials required for their voyage. Access to up-to-date nautical charts and publications is essential for safe navigation and compliance with international maritime regulations. The ship supply service provides official vessel logbooks and record books to ensure mandatory documentation is accurately maintained. Sourcing the latest IMO, SOLAS, MARPOL, and STCW publications guarantees the vessel operates within current legal frameworks. Reliable supply of navigational notices and flag sets supports safe and efficient global transit.
 
 </p>
                                 </div>
@@ -1696,7 +1800,7 @@
                                 <div>
                                     <span class="eyebrow">Category 12</span>
                                     <h2>Tools & Marine Hardware</h2>
-                                    <p>The supply range includes hand tools, power tools, cutting tools, measuring equipment, fasteners, and general marine hardware for routine maintenance and emergency repairs. Ship Chandler Libya Port ensures that quality tools and marine hardware are readily available to support the vessel's crew in maintaining operational efficiency and safety. The vessel supply service provides durable hand tools and precision measuring equipment essential for engine room and deck tasks. Sourcing high-grade fasteners, drill bits, and abrasives ensures the workshop is prepared for challenging repair jobs. Access to professional-grade hardware and power tools enhances the crew's ability to perform complex maintenance tasks efficiently.</p>
+                                    <p>Ship Chandler Libya Port's supply range includes hand tools, power tools, cutting tools, measuring equipment, fasteners, and general marine hardware for routine maintenance and emergency repairs. Ship Chandler Libya Port ensures that quality tools and marine hardware are readily available to support the vessel's crew in maintaining operational efficiency and safety. The vessel supply service provides durable hand tools and precision measuring equipment essential for engine room and deck tasks. Sourcing high-grade fasteners, drill bits, and abrasives ensures the workshop is prepared for challenging repair jobs. Access to professional-grade hardware and power tools enhances the crew's ability to perform complex maintenance tasks efficiently.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1730,7 +1834,7 @@
                                 <div>
                                     <span class="eyebrow">Category 13</span>
                                     <h2>Urgent Ship Supply in Libya</h2>
-                                    <p>Vessel schedules can change quickly. For urgent requirements, Ship Chandler Libya Port can coordinate procurement and delivery according to the vessel ETA, berth availability, port access, and local operating conditions. Urgent enquiries should clearly indicate the required delivery deadline so that availability and logistics can be assessed immediately to prevent vessel delays. The ship chandler service prioritizes rapid response and efficient sourcing of critical items, including emergency provisions and technical spares. Coordination with port agents and launch boats ensures rapid dispatch to the vessel's berth or outer anchorage, resolving last-minute shortages quickly.</p>
+                                    <p>At Ship Chandler Libya Port, vessel schedules can change quickly. For urgent requirements, Ship Chandler Libya Port can coordinate procurement and delivery according to the vessel ETA, berth availability, port access, and local operating conditions. Urgent enquiries should clearly indicate the required delivery deadline so that availability and logistics can be assessed immediately to prevent vessel delays. The ship chandler service prioritizes rapid response and efficient sourcing of critical items, including emergency provisions and technical spares. Coordination with port agents and launch boats ensures rapid dispatch to the vessel's berth or outer anchorage, resolving last-minute shortages quickly.</p>
                                 </div>
                             </div>
                             <div class="pane-grid">
@@ -1804,11 +1908,23 @@
                     <h4>Contact Us</h4>
                     <ul class="footer-contact">
                         <li><i class="fas fa-map-marker-alt"></i> Misurata Seaport, Qasr Ahmed, Misurata, Libya</li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2482743244"
-                                style="color:inherit;">+248 2 743 244</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:sales@shipchandlerlibya.com"
                                 style="color:inherit;">sales@shipchandlerlibya.com</a></li>
                         <li><i class="fas fa-user-tie"></i> Omar Ali (Operations Manager)</li>
+                        <li>
+                            <a class="hero-whatsapp-bar" href="https://wa.me/2482743244" target="_blank"
+                                rel="noopener noreferrer" aria-label="Direct WhatsApp contact (+248) 2 743 244">
+                                <span class="hero-whatsapp-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    </svg>
+                                </span>
+                                <span class="hero-whatsapp-tag">WhatsApp:</span>
+                                <span class="hero-whatsapp-num">(+248) 2 743 244</span>
+                                <span class="hero-whatsapp-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
