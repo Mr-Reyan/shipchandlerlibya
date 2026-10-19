@@ -1001,28 +1001,53 @@
       .nav-item { width: 100%; }
       .nav-link { width: 100%; justify-content: space-between; padding: 16px; font-size: 1.1rem; color: var(--navy); }
       
-      .dropdown-menu, .mega-menu {
-        position: static;
-        transform: none;
-        opacity: 1; visibility: visible;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 0 16px;
-        max-height: 0; overflow: hidden;
-        transition: max-height 0.4s ease;
-        display: block; min-width: auto;
-        width: 100%;
-        background: transparent;
-      }
+      .dropdown-menu,
+            .mega-menu {
+                position: static !important; /* Forces it to stay in the document flow */
+                transform: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 8px 0 8px 16px !important;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+                display: block !important;
+                min-width: auto !important;
+                width: 100% !important;
+                background: transparent !important;
+                top: auto !important; /* Resets the desktop fixed positioning */
+                left: auto !important;
+            }
+
+            .nav-item.open .dropdown-menu,
+            .nav-item.open .mega-menu {
+                max-height: 2000px !important; /* Large enough to fit all ports */
+            }
       
-      .dropdown-menu a, .mega-group a, .mega-header-title, .mega-group h4 {
-        color: var(--gray-700) !important;
-      }
+      .dropdown-menu a,
+            .mega-group a,
+            .mega-header-title,
+            .mega-group h4 {
+                color: var(--gray-700) !important;
+            }
+
+            .dropdown-menu a,
+            .mega-group a {
+                padding: 12px !important;
+                margin: 4px 0 !important;
+                border-radius: var(--radius-sm);
+                font-size: 0.95rem !important;
+                line-height: 1.5;
+                display: block;
+            }
       
-      .dropdown-menu a:hover, .mega-group a:hover {
-        color: var(--navy) !important;
-        background: var(--off-white);
-      }
+      .dropdown-menu a:hover,
+            .mega-group a:hover {
+                color: var(--navy) !important;
+                background: var(--off-white);
+            }
 
       .nav-item.open .dropdown-menu, .nav-item.open .mega-menu {
         max-height: 1000px;

@@ -1112,20 +1112,27 @@
 
             .dropdown-menu,
             .mega-menu {
-                position: static;
-                transform: none;
-                opacity: 1;
-                visibility: visible;
-                box-shadow: none;
-                border: none;
-                padding: 0 0 0 16px;
+                position: static !important; /* Forces it to stay in the document flow */
+                transform: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 8px 0 8px 16px !important;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.4s ease;
-                display: block;
-                min-width: auto;
-                width: 100%;
-                background: transparent;
+                display: block !important;
+                min-width: auto !important;
+                width: 100% !important;
+                background: transparent !important;
+                top: auto !important; /* Resets the desktop fixed positioning */
+                left: auto !important;
+            }
+
+            .nav-item.open .dropdown-menu,
+            .nav-item.open .mega-menu {
+                max-height: 2000px !important; /* Large enough to fit all ports */
             }
 
             .dropdown-menu a,
@@ -1133,6 +1140,16 @@
             .mega-header-title,
             .mega-group h4 {
                 color: var(--gray-700) !important;
+            }
+
+            .dropdown-menu a,
+            .mega-group a {
+                padding: 12px !important;
+                margin: 4px 0 !important;
+                border-radius: var(--radius-sm);
+                font-size: 0.95rem !important;
+                line-height: 1.5;
+                display: block;
             }
 
             .dropdown-menu a:hover,
@@ -1143,15 +1160,44 @@
 
             .nav-item.open .dropdown-menu,
             .nav-item.open .mega-menu {
-                max-height: 1000px;
+                max-height: 2000px;
+            }
+
+            .mega-header {
+                padding: 12px 0;
+                margin-bottom: 8px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .mega-search {
+                width: 100%;
+            }
+            .mega-search input {
+                width: 100%;
             }
 
             .mega-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr; /* Stacks the ports in a single column for mobile */
+                gap: 12px;
+                padding: 8px 0;
+            }
+
+            .mega-group {
+                margin-bottom: 12px;
+            }
+
+            .mega-group h4 {
+                font-size: 0.85rem !important;
+                margin-bottom: 8px;
+                padding: 8px 12px;
+                border-bottom: 1px solid var(--gray-100);
             }
 
             .mega-menu {
-                min-width: 600px;
+                min-width: auto;
+                width: 100%;
             }
 
             .form-layout {
@@ -1170,11 +1216,17 @@
         @media (max-width: 768px) {
             .mega-grid {
                 grid-template-columns: 1fr;
+                gap: 6px;
             }
 
             .mega-menu {
                 min-width: auto;
-                width: 95vw;
+                width: 100%;
+            }
+
+            .mega-group a {
+                padding: 12px 12px !important;
+                font-size: 0.9rem !important;
             }
 
             .form-main {

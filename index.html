@@ -1086,6 +1086,136 @@
        RESPONSIVE DESIGN
     ========================================= */
         @media (max-width: 1024px) {
+            .site-header {
+                width: calc(100% - 32px);
+                top: 16px;
+            }
+
+            .header-inner {
+                padding: 12px 24px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .primary-nav {
+                position: fixed;
+                top: 0;
+                right: -120%;
+                width: 100%;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 120px 24px 40px;
+                transition: var(--transition);
+                overflow-y: auto;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .primary-nav.open {
+                right: 0;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+                align-items: flex-start;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                width: 100%;
+                justify-content: space-between;
+                padding: 16px;
+                font-size: 1.1rem;
+                color: var(--navy);
+            }
+
+            .dropdown-menu,
+            .mega-menu {
+                position: static !important; /* Forces it to stay in the document flow */
+                transform: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 8px 0 8px 16px !important;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+                display: block !important;
+                min-width: auto !important;
+                width: 100% !important;
+                background: transparent !important;
+                top: auto !important; /* Resets the desktop fixed positioning */
+                left: auto !important;
+            }
+
+            .nav-item.open .dropdown-menu,
+            .nav-item.open .mega-menu {
+                max-height: 2000px !important; /* Large enough to fit all ports */
+            }
+
+            .dropdown-menu a,
+            .mega-group a,
+            .mega-header-title,
+            .mega-group h4 {
+                color: var(--gray-700) !important;
+            }
+
+            .dropdown-menu a,
+            .mega-group a {
+                padding: 12px !important;
+                margin: 4px 0 !important;
+                border-radius: var(--radius-sm);
+                font-size: 0.95rem !important;
+                line-height: 1.5;
+                display: block;
+            }
+
+            .dropdown-menu a:hover,
+            .mega-group a:hover {
+                color: var(--navy) !important;
+                background: var(--off-white);
+            }
+
+            .mega-header {
+                padding: 12px 0;
+                margin-bottom: 8px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .mega-search {
+                width: 100%;
+            }
+            .mega-search input {
+                width: 100%;
+            }
+
+            .mega-grid {
+                grid-template-columns: 1fr; /* Stacks the ports in a single column for mobile */
+                gap: 12px;
+                padding: 8px 0;
+            }
+
+            .mega-group {
+                margin-bottom: 12px;
+            }
+
+            .mega-group h4 {
+                font-size: 0.85rem !important;
+                margin-bottom: 8px;
+                padding: 8px 12px;
+                border-bottom: 1px solid var(--gray-100);
+            }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -1114,89 +1244,9 @@
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
-            .mega-menu {
-                min-width: 600px;
-            }
         }
 
         @media (max-width: 768px) {
-            .site-header {
-                width: calc(100% - 24px);
-                top: 12px;
-            }
-
-            .header-inner {
-                padding: 12px 20px;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
-            .primary-nav {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 100%;
-                height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                padding: 100px 24px 40px;
-                transition: var(--transition);
-                overflow-y: auto;
-            }
-
-            .primary-nav.open {
-                right: 0;
-            }
-
-            .nav-list {
-                flex-direction: column;
-                width: 100%;
-                gap: 8px;
-            }
-
-            .nav-item {
-                width: 100%;
-            }
-
-            .nav-link {
-                width: 100%;
-                justify-content: space-between;
-                padding: 16px;
-                font-size: 1.1rem;
-            }
-
-            .dropdown-menu,
-            .mega-menu {
-                position: static;
-                transform: none;
-                opacity: 1;
-                visibility: visible;
-                box-shadow: none;
-                border: none;
-                padding: 0 0 0 16px;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.4s ease;
-                display: block;
-                min-width: auto;
-            }
-
-            .nav-item.open .dropdown-menu,
-            .nav-item.open .mega-menu {
-                max-height: 1000px;
-            }
-
-            .mega-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .mega-menu {
-                min-width: 600px;
-            }
-
             .hero-title {
                 font-size: 2.8rem;
             }
@@ -1237,11 +1287,17 @@
         @media (max-width: 768px) {
             .mega-grid {
                 grid-template-columns: 1fr;
+                gap: 6px;
             }
 
             .mega-menu {
                 min-width: auto;
-                width: 95vw;
+                width: 100%;
+            }
+
+            .mega-group a {
+                padding: 12px 12px !important;
+                font-size: 0.9rem !important;
             }
 
             .footer-grid {
